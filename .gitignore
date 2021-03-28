@@ -1,0 +1,4 @@
+prepros.config
+venv/
+*.pyc
+__pycache__

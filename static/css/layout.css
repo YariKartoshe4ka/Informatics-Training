@@ -1,30 +1,27 @@
 @font-face {
-  font-family: "Comfortaa";
-  src: url("/static/fonts/Comfortaa-Regular.ttf");
+    font-family: "Comfortaa";
+    src: url("/static/fonts/Comfortaa-Regular.ttf");
 }
+
 * {
-  font-family: "Comfortaa" !important;
+    font-family: "Comfortaa" !important;
 }
 
 body {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .layout {
-  position: absolute;
-  top: 35%;
-  width: 50%;
-  margin: 0 25% 0 25%;
+    position: absolute;
+    width: 50%;
+    display: none;
 }
 
 @media (max-width: 680px) {
-  .layout {
-    position: absolute;
-    top: 40%;
-    width: 90%;
-    margin: 0 5% 0 5%;
-  }
+    .layout {
+        position: absolute;
+        width: 90%;
+    }
 }

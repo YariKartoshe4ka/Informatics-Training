@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
     {% block head %}
         <title>Загаловок</title>
     {% endblock %}
@@ -18,5 +17,26 @@
             {% endblock %}
         </center>
     </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script>
+        function layout_size() {
+            var layout = $('.layout');
+
+            layout.css({'top': ($(window).height() - layout.height()) / 2});
+            layout.css({'left': ($(window).width() - layout.width()) / 2});
+            layout.css({'display': 'block'});
+        };
+
+        window.onresize = layout_size;
+
+        layout_size();
+        
+    </script>
+
+    {% block script %}
+
+    {% endblock %}
 </body>
 </html>

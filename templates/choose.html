@@ -1,0 +1,44 @@
+{% extends 'base/layout.html' %}
+
+{% block head %}
+<title>Выберите тип тренировки</title>
+{% endblock %}
+
+
+{% block content %}
+
+<h1>Bыберите тип тренировки</h1>
+
+{% if error %}
+    <div class="alert alert-danger" >{{ error }}</div>
+{% endif %}
+
+<select id="select" class="form-control mt-3 mb-3">
+    <option value="powers">Cтепени двойки</option>
+    <option value="systems">Системы счисления</option>
+</select>
+
+<form action="/choose" method="post" id="powers">
+    <input type="hidden" name="type" value="powers">
+
+    <label for="range" style="float: left;" id="label-range">Максимальная степень: 20</label>
+    <input type="range" min="10" max="30" step="10" class="form-control-range" style="width: 100%;" id="range" name="range">
+
+    <input type="submit" value="Начать!" class="btn btn-primary">
+</form>
+
+<form action="/choose" method="post" id="systems" style="display: none;">
+    <input type="hidden" name="type" value="systems">
+    <input type="text">
+
+    <input type="submit" value="Начать!" class="btn btn-primary">
+</form>
+
+{% endblock %}
+
+
+{% block script %}
+
+<script src="{{ url_for('static', filename='js/choose.js') }}"></script>
+
+{% endblock %}

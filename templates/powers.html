@@ -1,0 +1,34 @@
+{% extends 'base/layout.html' %}
+
+{% block head %}
+<title>Степени двойки</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/powers.css') }}">
+<script>var max_power = {{ max_power }};</script>
+{% endblock %}
+
+
+{% block content %}
+
+<div id="result" class="mb-3"></div>
+
+<h1 id="task">2<sup>1</sup></h1>
+<input type="hidden" value="" id="answer">
+
+
+{% for i in range(0, max_power // 5) %}
+    <div class="row">
+
+        {% for j in range(1, 6) %}
+            <div class="col p-1">
+                <button class="btn btn-primary w-100" onclick="check_answer({{ 2 ** (i * 5 + j)}})">{{ 2 ** (i * 5 + j) }}</button>
+            </div>
+        {% endfor %}
+    </div>
+{% endfor %}
+
+{% endblock %}
+
+
+{% block script %}
+<script src="{{ url_for('static', filename='js/powers.js') }}"></script>
+{% endblock %}

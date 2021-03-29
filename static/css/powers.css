@@ -1,0 +1,9 @@
+#task {
+    font-size: 5em;
+}
+
+#result {
+    display: none;
+    color: #fa0000;
+    font-size: 1.5em;
+}

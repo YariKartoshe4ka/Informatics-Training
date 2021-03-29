@@ -9,6 +9,6 @@ $('#select').on('change', function() {
 });
 
 
-$('#range').on('change', function() {
+$('#range').on('input change', function() {
     $('#label-range').text('Максимальная степень: ' + $('#range').val());
 });

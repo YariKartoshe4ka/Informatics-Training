@@ -17,4 +17,8 @@ def choose_page():
     if request.form.get('type') == 'powers':
         return render_template('powers.html', max_power=int(request.form.get('range')))
 
-    return render_template('choose.html', error='Проверьте правильность заполнения полей!') 
+    return render_template('choose.html', error='Проверьте правильность заполнения полей!')
+
+
+if __name__ == '__main__':
+    app.run(debug=False, port=5000)

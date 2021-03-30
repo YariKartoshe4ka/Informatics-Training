@@ -21,7 +21,7 @@
 
     <script src="{{ url_for('static', filename='js/jquery-3.4.1.slim.min.js') }}"></script>
     <script>
-        function layout_size() {
+        function layout_resize() {
             var layout = $('.layout');
 
             layout.css({'top': ($(window).height() - layout.height()) / 2});
@@ -29,9 +29,10 @@
             layout.css({'display': 'block'});
         };
 
-        window.onresize = layout_size;
+        $('.layout').on('change', layout_resize);
+        window.onresize = layout_resize;
 
-        layout_size();
+        layout_resize();
         
     </script>
 

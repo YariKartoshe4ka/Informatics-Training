@@ -21,15 +21,20 @@
 <form action="/choose" method="post" id="powers">
     <input type="hidden" name="type" value="powers">
 
-    <label for="range" style="float: left;" id="label-range">Максимальная степень: 15</label>
-    <input type="range" min="10" max="20" step="5" class="form-control-range" style="width: 100%;" id="range" name="range">
+    <label for="range" class="float-start" id="label-range">Максимальная степень: 15</label>
+    <input type="range" min="10" max="20" step="5" class="form-range w-100" id="range" name="range">
 
     <input type="submit" value="Начать!" class="btn btn-primary">
 </form>
 
 <form action="/choose" method="post" id="systems" style="display: none;">
     <input type="hidden" name="type" value="systems">
-    <input type="text">
+    
+    <label for="system-from" class="float-start mb-2">Основание исходной системы счисления:</label>
+    <input class="form-control w-100 mb-2" type="number" min="2" max="36" placeholder="Число от 2 до 36" id="system-from" name="system-from">
+
+    <label for="system-to" class="float-start mb-2">Основание системы счисления ответа:</label>
+    <input class="form-control w-100 mb-2" type="number" min="2" max="36" placeholder="Число от 2 до 36" id="system-to" name="system-to">
 
     <input type="submit" value="Начать!" class="btn btn-primary">
 </form>

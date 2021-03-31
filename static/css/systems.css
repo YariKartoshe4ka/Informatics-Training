@@ -1,9 +1,9 @@
 #full-task {
-    font-size: 3em;
+    font-size: 4em;
 }
 
 #result {
     display: none;
     color: #fa0000;
-    font-size: 1em;
+    font-size: 1.5em;
 }

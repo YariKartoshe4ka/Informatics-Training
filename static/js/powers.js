@@ -1,14 +1,12 @@
+sessionStorage.setItem('all_attemps', 0);
+sessionStorage.setItem('correct_attemps', 0);
+
 function generate_task(max_power) {
     var power = 1 + Math.floor(Math.random() * max_power);
     
     $('#task').text(power);
 
     sessionStorage.setItem('answer', Math.pow(2, power));
-
-    if (!sessionStorage.getItem('all_attemps')) {
-        sessionStorage.setItem('all_attemps', 0);
-        sessionStorage.setItem('correct_attemps', 0);
-    }
 };
 
 function check_answer(answer) {

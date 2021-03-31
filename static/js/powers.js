@@ -1,8 +1,11 @@
 sessionStorage.setItem('all_attemps', 0);
 sessionStorage.setItem('correct_attemps', 0);
 
-function generate_task(max_power) {
+function generate_task(max_power, previous_power) {
     var power = 1 + Math.floor(Math.random() * max_power);
+
+    while (power == previous_power)
+        var power = 1 + Math.floor(Math.random() * max_power);
     
     $('#task').text(power);
 
@@ -30,7 +33,7 @@ function check_answer(answer) {
 
     $('#statistics').text(`Bерные попытки: ${correct_attemps} из ${all_attemps} (${parseInt(correct_attemps / all_attemps * 100)}%)`);
 
-    generate_task(window.max_power);
+    generate_task(window.max_power, Math.log2(correct_answer));
 };
 
-generate_task(max_power);
+generate_task(max_power, 0);

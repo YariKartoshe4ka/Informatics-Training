@@ -40,9 +40,9 @@ function check_answer(system_from, system_to) {
 
     $('#result').css({'display': 'block'});
 
-    
-
     $('#statistics').text(`Bерные попытки: ${correct_attemps} из ${all_attemps} (${parseInt(correct_attemps / all_attemps * 100)}%)`);
+
+    $('#answer').val('');
 
     generate_task(system_from, system_to);
 }

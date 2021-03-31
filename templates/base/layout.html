@@ -30,9 +30,8 @@
         };
 
         $('.layout').on('change', layout_resize);
+        $(document).ready(layout_resize);
         window.onresize = layout_resize;
-
-        layout_resize();
         
     </script>
 

@@ -10,5 +10,5 @@ $('#select').on('change', function() {
 
 
 $('#range').on('input change', function() {
-    $('#label-range').text('Максимальная степень: ' + $('#range').val());
+    $('#choose-max-power').text($('#range').val());
 });

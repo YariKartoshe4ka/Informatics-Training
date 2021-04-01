@@ -10,6 +10,11 @@
     {% endblock %}
 </head>
 <body>
+    <div id="translator" onclick="change_lang()">
+        <img src="{{ url_for('static', filename='img/russia_flag.svg') }}" class="lang-flag lang-current" lang="ru-ru">
+        <img src="{{ url_for('static', filename='img/uk_flag.svg') }}" class="lang-flag" lang="en-gb">
+    </div>
+
     <div class="layout">
         <center>
             {% block content %}
@@ -19,7 +24,8 @@
     </div>
 
 
-    <script src="{{ url_for('static', filename='js/jquery-3.4.1.slim.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/translator.js') }}"></script>
     <script>
         function layout_resize() {
             var layout = $('.layout');

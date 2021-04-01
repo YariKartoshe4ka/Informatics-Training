@@ -14,7 +14,7 @@
 {% endif %}
 
 <select id="select" class="form-control mt-3 mb-3">
-    <option value="powers">Cтепени двойки</option>
+    <option value="powers" selected="">Cтепени двойки</option>
     <option value="systems">Системы счисления</option>
 </select>
 
@@ -31,10 +31,10 @@
     <input type="hidden" name="type" value="systems">
     
     <label for="system-from" class="float-start mb-2">Основание исходной системы счисления:</label>
-    <input class="form-control w-100 mb-2" type="number" min="2" max="36" placeholder="Число от 2 до 36" id="system-from" name="system-from">
+    <input class="form-control w-100 mb-2" type="number" min="2" max="36" placeholder="Число от 2 до 36" id="system-from" name="system-from" required="">
 
     <label for="system-to" class="float-start mb-2">Основание системы счисления ответа:</label>
-    <input class="form-control w-100 mb-2" type="number" min="2" max="36" placeholder="Число от 2 до 36" id="system-to" name="system-to">
+    <input class="form-control w-100 mb-2" type="number" min="2" max="36" placeholder="Число от 2 до 36" id="system-to" name="system-to" required="">
 
     <input type="submit" value="Начать!" class="btn btn-primary">
 </form>

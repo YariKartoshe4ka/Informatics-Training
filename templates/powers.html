@@ -9,7 +9,7 @@
 
 {% block content %}
 
-<div id="result" class="mb-3"></div>
+{% include 'include/answer.html' %}
 
 <h1 id="full-task">2<sup><span id="task"></span></sup></h1>
 
@@ -25,12 +25,13 @@
     </div>
 {% endfor %}
 
-<p class="mt-2" id="statistics">Bерно решено: 0 из 0</p>
+{% include 'include/statistics.html' %}
 
 {% endblock %}
 
 
 {% block script %}
+<script src="{{ url_for('static', filename='js/answer.js') }}"></script>
 <script src="{{ url_for('static', filename='js/powers.js') }}"></script>
 <script src="{{ url_for('static', filename='js/sessionstorage.js') }}"></script>
 {% include 'include/home.html' %}

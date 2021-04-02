@@ -12,5 +12,10 @@
     "choose-input-system-from": {"placeholder": "Number from 2 to 36"},
     "choose-label-system-to": {"text": "Base of number system of answer:"},
     "choose-input-system-to": {"placeholder": "Number from 2 to 36"},
-    "choose-submit-systems": {"value": "Start!"}
+    "choose-submit-systems": {"value": "Start!"},
+
+    "answer-correct": {"text": "Correct!"},
+    "answer-incorrect": {"text": "Incorrect!"},
+    "statistics-label-correct-attempts": {"text": "Correct decisions:"},
+    "statistics-label-correct-attempts-preposition": {"text": "out of"}
 }

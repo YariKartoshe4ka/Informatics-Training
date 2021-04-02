@@ -25,13 +25,11 @@ function change_lang() {
 
 function translate(lang) {
     $.getJSON(`/static/lang/${lang}.json`, function(data) {
-        window.lang_pack = data;
-
         $.each(data, function(id, attrs) {
             $.each(attrs, function(attr, value) {
                 if ($(`#${id}`).length > 0)
                     if (attr == 'text')
-                        $(`#${id}`).get(0).childNodes[0].nodeValue = value;
+                        $(`#${id}`).text(value);
                     else
                         $(`#${id}`).attr(attr, value);
             });

@@ -1,5 +1,5 @@
-sessionStorage.setItem('all_attemps', 0);
-sessionStorage.setItem('correct_attemps', 0);
+sessionStorage.setItem('all_attempts', 0);
+sessionStorage.setItem('correct_attempts', 0);
 
 function generate_task(system_from, system_to) {
     var system_min = Math.min(system_from, system_to);
@@ -23,26 +23,20 @@ function generate_task(system_from, system_to) {
 
 
 function check_answer(system_from, system_to) {
-    var answer = $('#answer').val();
+    var answer = $('#systems-input-answer').val();
     var correct_answer = sessionStorage.getItem('answer');
-    var all_attemps = parseInt(sessionStorage.getItem('all_attemps'));
-    var correct_attemps = parseInt(sessionStorage.getItem('correct_attemps'));
+    var all_attempts = parseInt(sessionStorage.getItem('all_attempts'));
+    var correct_attempts = parseInt(sessionStorage.getItem('correct_attempts'));
 
-    sessionStorage.setItem('all_attemps', ++all_attemps);
+    sessionStorage.setItem('all_attempts', ++all_attempts);
 
-    if (answer.toLowerCase() == correct_answer) {
-        $('#result').text('Bерно!');
-        sessionStorage.setItem('correct_attemps', ++correct_attemps);
-    }
-    
-    else
-        $('#result').html(`Неверно! ${$('#task').text()}<sub>${system_from}</sub>=${correct_answer}<sub>${system_to}</sub>`);
+    update_answer_and_statistics(answer.toLowerCase(),
+                                 correct_answer,
+                                 `${$('#task').text()}<sub>${system_from}</sub>=${correct_answer.toUpperCase()}<sub>${system_to}</sub>`,
+                                 correct_attempts,
+                                 all_attempts);
 
-    $('#result').css({'display': 'block'});
-
-    $('#statistics').text(`Bерные попытки: ${correct_attemps} из ${all_attemps} (${parseInt(correct_attemps / all_attemps * 100)}%)`);
-
-    $('#answer').val('');
+    $('#systems-input-answer').val('');
 
     generate_task(system_from, system_to);
 }

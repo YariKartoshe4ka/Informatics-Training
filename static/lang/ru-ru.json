@@ -1,3 +1,25 @@
 {
-    "welcome": {"text": "Добро пожаловать!"}
+    "index-header": {"text": "Добро пожаловать!"},
+    "index-start-training-btn": {"text": "Начать тренировку"},
+
+    "choose-header": {"text": "Bыберите тип тренировки"},
+    "choose-error": {"text": "Проверьте правильность заполнения полей!"},
+    "choose-type-powers": {"text": "Cтепени двойки"},
+    "choose-type-systems": {"text": "Системы счисления"},
+    "choose-label-power": {"text": "Максиальная степень:"},
+    "choose-submit-powers": {"value": "Начать!"},
+    "choose-label-system-from": {"text": "Основание исходной системы счисления:"},
+    "choose-input-system-from": {"placeholder": "Число от 2 до 36"},
+    "choose-label-system-to": {"text": "Основание системы счисления ответа:"},
+    "choose-input-system-to": {"placeholder": "Число от 2 до 36"},
+    "choose-submit-systems": {"value": "Начать!"},
+
+    "answer-correct": {"text": "Bерно!"},
+    "answer-incorrect": {"text": "Неверно!"},
+    "statistics-label-correct-attempts": {"text": "Bерные решения:"},
+    "statistics-label-correct-attempts-preposition": {"text": "из"},
+    
+    "systems-input-answer": {"placeholder": "Число с основанием",
+                             "exec": "$('#systems-input-answer').attr('placeholder', `${$('#systems-input-answer').attr('placeholder')} ${system_to}`)"},
+    "systems-button-check": {"text": "Проверить!"}
 }

@@ -6,7 +6,7 @@
     "choose-error": {"text": "Check the correctness of filling in the fields"},
     "choose-type-powers": {"text": "Powers of two"},
     "choose-type-systems": {"text": "Number systems"},
-    "choose-label-power": {"text": "Maximum power: "},
+    "choose-label-power": {"text": "Maximum power:"},
     "choose-submit-powers": {"value": "Start!"},
     "choose-label-system-from": {"text": "Base of original number system:"},
     "choose-input-system-from": {"placeholder": "Number from 2 to 36"},
@@ -17,5 +17,9 @@
     "answer-correct": {"text": "Correct!"},
     "answer-incorrect": {"text": "Incorrect!"},
     "statistics-label-correct-attempts": {"text": "Correct decisions:"},
-    "statistics-label-correct-attempts-preposition": {"text": "out of"}
+    "statistics-label-correct-attempts-preposition": {"text": "out of"},
+    
+    "systems-input-answer": {"placeholder": "Number with a base of",
+                             "exec": "$('#systems-input-answer').attr('placeholder', `${$('#systems-input-answer').attr('placeholder')} ${system_to}`)"},
+    "systems-button-check": {"text": "Check!"}
 }

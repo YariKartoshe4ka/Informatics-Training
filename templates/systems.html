@@ -10,21 +10,21 @@
 
 {% block content %}
 
-<div id="result" class="mb-3" style="display: none;"></div>
+{% include 'include/answer.html' %}
 
 <h1 id="full-task"><span id="task"></span><sub>{{ system_from }}</sub></h1>
 
 <div class="form-group row no-collapse">
     <div class="col-sm-9 mb-3">
-        <input type="text" id="answer" placeholder="Число с основанием {{ system_to }}" class="form-control w-100">
+        <input type="text" id="systems-input-answer" placeholder="Число с основанием {{ system_to }}" class="form-control w-100">
     </div>
     
     <div class="col-sm-3">
-        <button class="btn btn-primary w-100" onclick="check_answer(system_from, system_to)">Проверить!</button>
+        <button class="btn btn-primary w-100" onclick="check_answer(system_from, system_to)" id="systems-button-check">Проверить!</button>
     </div>
 </div>
 
-<p class="mt-2" id="statistics">Bерно решено: 0 из 0</p>
+{% include 'include/statistics.html' %}
 
 {% endblock %}
 
@@ -32,6 +32,6 @@
 
 {% block script %}
 <script src="{{ url_for('static', filename='js/systems.js') }}"></script>
-<script src="{{ url_for('static', filename='js/sessionstorage.js') }}"></script>
+<script src="{{ url_for('static', filename='js/training-utilities.js') }}"></script>
 {% include 'include/home.html' %}
 {% endblock %}

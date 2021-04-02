@@ -30,6 +30,8 @@ function translate(lang) {
                 if ($(`#${id}`).length > 0)
                     if (attr == 'text')
                         $(`#${id}`).text(value);
+                    else if (attr == 'exec')
+                        eval(value);
                     else
                         $(`#${id}`).attr(attr, value);
             });
@@ -38,19 +40,17 @@ function translate(lang) {
 }
 
 function update_lang_button() {
-    var children = $('#translator').children();
+    $.each($('#translator').children(), function (index, button) {
+        if (button.lang == 'ru-ru')
+            button.classList.remove('lang-current');
 
-    for (var i = 0; i < children.length; i++) {
-        if (children[i].lang == 'ru-ru')
-            children[i].classList.remove('lang-current');
+        if (button.lang == window.lang) {
+            button.classList.add('lang-current');
 
-        if (children[i].lang == window.lang) {
-            children[i].classList.add('lang-current');
-
-            translate(children[i].lang);
+            translate(button.lang);
         }
-    }
-
+    });
+    
     $('#translator').css({'display': 'block'});
 }
 

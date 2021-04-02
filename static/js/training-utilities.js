@@ -1,3 +1,8 @@
+$(window).on('unload', function() {
+    sessionStorage.clear();
+});
+
+
 function update_answer_and_statistics(answer,
                                       correct_answer,
                                       explanation,

@@ -3,7 +3,7 @@
 {% block head %}
 <title>Степени двойки</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/powers.css') }}">
-<script>var max_power = {{ max_power }};</script>
+<script>var max_power = {{ max_power }}; var use_input = {{ use_input }}</script>
 {% endblock %}
 
 
@@ -13,17 +13,28 @@
 
 <h1 id="full-task">2<sup><span id="task"></span></sup></h1>
 
-
-{% for i in range(0, max_power // 5) %}
-    <div class="row">
-
-        {% for j in range(1, 6) %}
-            <div class="col p-1">
-                <button class="btn btn-primary w-100" onclick="check_answer({{ 2 ** (i * 5 + j)}})">{{ 2 ** (i * 5 + j) }}</button>
-            </div>
-        {% endfor %}
+{% if use_input %}
+    <div class="form-group row no-collapse">
+        <div class="col-sm-9 mb-3">
+            <input type="text" id="powers-input-answer" placeholder="Ответ" class="form-control w-100">
+        </div>
+        
+        <div class="col-sm-3">
+            <button class="btn btn-primary w-100" onclick="check_answer('use-input')" id="powers-button-check">Проверить!</button>
+        </div>
     </div>
-{% endfor %}
+{% else %}
+    {% for i in range(0, max_power // 5) %}
+        <div class="row">
+
+            {% for j in range(1, 6) %}
+                <div class="col p-1">
+                    <button class="btn btn-primary w-100" onclick="check_answer({{ 2 ** (i * 5 + j)}})">{{ 2 ** (i * 5 + j) }}</button>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+{% endif %}
 
 {% include 'include/statistics.html' %}
 

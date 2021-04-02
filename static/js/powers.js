@@ -13,6 +13,9 @@ function generate_task(max_power, previous_power) {
 };
 
 function check_answer(answer) {
+    if (answer == 'use-input')
+        answer = $('#powers-input-answer').val();
+
     var correct_answer = sessionStorage.getItem('answer');
     var all_attempts = parseInt(sessionStorage.getItem('all_attempts'));
     var correct_attempts = parseInt(sessionStorage.getItem('correct_attempts'));

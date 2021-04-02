@@ -19,7 +19,9 @@
     "statistics-label-correct-attempts": {"text": "Bерные решения:"},
     "statistics-label-correct-attempts-preposition": {"text": "из"},
     
-    "systems-input-answer": {"placeholder": "Число с основанием",
-                             "exec": "$('#systems-input-answer').attr('placeholder', `${$('#systems-input-answer').attr('placeholder')} ${system_to}`)"},
-    "systems-button-check": {"text": "Проверить!"}
+    "systems-input-answer": {"exec": "$('#systems-input-answer').attr('placeholder', `Число с основанием ${system_to}`)"},
+    "systems-button-check": {"text": "Проверить!"},
+
+    "powers-input-answer": {"placeholder": "Ответ"},
+    "powers-button-check": {"text": "Проверить!"}
 }

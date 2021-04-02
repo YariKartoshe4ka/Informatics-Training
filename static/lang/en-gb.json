@@ -19,7 +19,9 @@
     "statistics-label-correct-attempts": {"text": "Correct decisions:"},
     "statistics-label-correct-attempts-preposition": {"text": "out of"},
     
-    "systems-input-answer": {"placeholder": "Number with a base of",
-                             "exec": "$('#systems-input-answer').attr('placeholder', `${$('#systems-input-answer').attr('placeholder')} ${system_to}`)"},
-    "systems-button-check": {"text": "Check!"}
+    "systems-input-answer": {"exec": "$('#systems-input-answer').attr('placeholder', `Number with a base of ${system_to}`)"},
+    "systems-button-check": {"text": "Check!"},
+
+    "powers-input-answer": {"placeholder": "Answer"},
+    "powers-button-check": {"text": "Check!"}
 }

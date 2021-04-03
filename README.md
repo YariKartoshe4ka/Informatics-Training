@@ -8,7 +8,7 @@ Program for honing the skill of translating numbers from different number system
 
 ### Supported Operating Systems
 - Android (compiled)
-- Windows (compiled)
+- Windows
 - Linux
 - Mac OS
 
@@ -22,11 +22,11 @@ Program for honing the skill of translating numbers from different number system
 
 ### Installation
 
-###### Windows / Android
+###### Android
 
-To install the program on Windows or Android you should download an executable file from the latest releases and run it (for Windows, it ends in **.exe**, for Android - **.apk**)
+To install the program on Android you should download an executable file from the latest releases and run it (for Android it ends in **.apk**)
 
-###### Linux / Mac OS
+###### Linux / Mac OS / Windows
 
 Open terminal and run the following commands:
 

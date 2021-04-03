@@ -7,6 +7,7 @@
     "choose-type-powers": {"text": "Cтепени двойки"},
     "choose-type-systems": {"text": "Системы счисления"},
     "choose-label-power": {"text": "Максиальная степень:"},
+    "choose-label-use-input": {"text": "Использовать строку ввода вместо кнопок"},
     "choose-submit-powers": {"value": "Начать!"},
     "choose-label-system-from": {"text": "Основание исходной системы счисления:"},
     "choose-input-system-from": {"placeholder": "Число от 2 до 36"},

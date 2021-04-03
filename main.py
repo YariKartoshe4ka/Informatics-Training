@@ -1,3 +1,4 @@
+from os import environ
 from flask import Flask, request, render_template
 
 
@@ -31,5 +32,11 @@ def choose_page():
     return render_template('choose.html', error=True)
 
 
+
 if __name__ == '__main__':
-    app.run(debug=False, port=5000)
+    if 'ANDROID_STORAGE' not in environ:
+        import webview
+        webview.create_window('Informatics Training', app, width=780, height=480)
+        webview.start()
+    else:
+        app.run()
